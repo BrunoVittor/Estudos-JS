@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo projeto</title>
+</head>
+<body>
+    <script>
+        let simbolo1 = "R$";
+        let simbolo2 = "$";
+        let simbolo3 = "E";
+
+        // escreva a função que receberá um simbolo de moedas
+        // como parametro e retornará o nome dela caso aconteça aquele simbolo
+        // senão retornar moeda não encontrada.
+
+        function moeda(simbolo) {
+            if (simbolo === "R$") {
+                console.log("Real");
+            } else if (simbolo === "$") {
+                console.log("Dólar");
+            } else if (simbolo === "E") {
+            console.log("Euro");
+            } else {
+                console.log("Moeda não encontrada")
+            }
+        }
+
+        function moeda2(simbolo) {
+        switch (simbolo)  {
+            case "R$":
+                console.log("Real");
+                break;
+            case "$":
+                console.log("Dólar");
+                break;
+            case "E":
+                console.log("Euro")
+                break;
+            default:
+                console.log("Não encontrado")
+                break;
+            }
+        }
+
+        let objetoServidor = {
+            acesso: true,
+            login: "mundojs"
+        };
+
+        let objetoservidor2 = {
+            erro: "Erro ao conectar ao servidor"
+        };
+
+        // Caso o objeto não contenha erro,
+        // confira se o acesso é permitido
+        // se for permitido exiba "login: mundojs"
+        // senão escreva "acesso negado"
+        // caso de erro, exiba a mensagem de erro
+
+        function conexaoLogin(respostaDoServidor) {
+            if (respostaDoServidor.erro == null) {
+                if (respostaDoServidor.acesso){
+                    console.log(`login: ${respostaDoServidor.login}`);
+                }
+                else{
+                    console.log("acesso negado")
+                }
+            }
+            else{
+                console.log(objetoservidor2.erro)
+            }
+        }
+
+
+    </script>
+</body>
+</html>
